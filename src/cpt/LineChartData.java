@@ -1,15 +1,11 @@
 package cpt;
 
 import javafx.application.Application;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
-import javafx.geometry.Orientation;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.CheckBox;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -62,7 +58,7 @@ public class LineChartData extends Application {
             checkBox.setOnAction(event -> updateChart(lineChart, checkBoxes));
             checkBoxes.add(checkBox);
         }
-        
+
         // Add the chart and check boxes to the scene
         VBox root = new VBox(lineChart);
         root.getChildren().addAll(checkBoxes);
