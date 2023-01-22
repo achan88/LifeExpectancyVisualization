@@ -13,14 +13,14 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class LineChartData extends Application {
 
-    private List<CountryData> dataList = new ArrayList<>();
+    private ArrayList<CountryData> dataList = new ArrayList<>();
 
     @Override
     public void start(Stage stage) {
+
         // Create the chart
         final NumberAxis xAxis = new NumberAxis();
         final NumberAxis yAxis = new NumberAxis();
@@ -31,7 +31,7 @@ public class LineChartData extends Application {
         lineChart.setCreateSymbols(false);
 
         // Read data from CSV file
-        readDataFromCSV("life_expectancy.csv");
+        readDataFromCSV("src/cpt/life_expectancy.csv");
 
         // Set the lower and upper bound of the x-axis to the lowest and highest year in the data
         int minYear = Integer.MAX_VALUE;
@@ -51,7 +51,7 @@ public class LineChartData extends Application {
         xAxis.setUpperBound(maxYear);
 
         // Create check boxes for each country
-        List<CheckBox> checkBoxes = new ArrayList<>();
+        ArrayList<CheckBox> checkBoxes = new ArrayList<>();
         for (CountryData data : dataList) {
             CheckBox checkBox = new CheckBox(data.getCountry());
             checkBox.setSelected(true);
@@ -71,7 +71,7 @@ public class LineChartData extends Application {
         updateChart(lineChart, checkBoxes);
     }
 
-    private void updateChart(LineChart<Number, Number> chart, List<CheckBox> checkBoxes) {
+    private void updateChart(LineChart<Number, Number> chart, ArrayList<CheckBox> checkBoxes) {
         chart.getData().clear();
         for (CountryData data : dataList) {
             XYChart.Series<Number, Number> series = new XYChart.Series<>();

@@ -1,12 +1,12 @@
 package cpt;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CountryData {
+
     private String country;
-    private List<Integer> years = new ArrayList<>();
-    private List<Double> lifeExpectancy = new ArrayList<>();
+    private ArrayList<Integer> years = new ArrayList<>();
+    private ArrayList<Double> lifeExpectancy = new ArrayList<>();
 
     public CountryData(String country, int year, double lifeExpectancy) {
         this.country = country;
@@ -17,11 +17,11 @@ public class CountryData {
         return country;
     }
 
-    public List<Integer> getYears() {
+    public ArrayList<Integer> getYears() {
         return years;
     }
 
-    public List<Double> getLifeExpectancy() {
+    public ArrayList<Double> getLifeExpectancy() {
         return lifeExpectancy;
     }
 
