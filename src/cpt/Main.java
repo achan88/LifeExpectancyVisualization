@@ -17,6 +17,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.util.ArrayList;
 import java.util.List;
+import javafx.scene.control.Button;
 
 public class Main extends Application {
     @Override
@@ -123,12 +124,17 @@ public class Main extends Application {
                 }
             }
             
+            // Create a button to sort the data in the bar chart
+            Button sortButton = new Button("Sort Data");
+            sortButton.setOnAction(event -> barChart.getData().clear());
+
             // Create the scene and show the stage
             TabPane tabPane = new TabPane();
             Tab tab1 = new Tab("Line Chart");
             tab1.setContent(new VBox(lineChart, checkBoxes));
             Tab tab2 = new Tab("Bar Chart");
             VBox root = new VBox(yearSelector, barChart);
+            root.getChildren().add(sortButton);
             tab2.setContent(root);
             tabPane.getTabs().addAll(tab1, tab2);
             Scene scene = new Scene(tabPane, 800, 600);
