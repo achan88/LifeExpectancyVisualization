@@ -1,0 +1,618 @@
+Canada,1831,39.05
+Canada,1841,40.32
+Canada,1851,41.06
+Canada,1861,41.6
+Canada,1871,42.56
+Canada,1881,44.73
+Canada,1891,45.17
+Canada,1901,48.63
+Canada,1911,52.51
+Canada,1921,57.03
+Canada,1922,56.99
+Canada,1923,56.93
+Canada,1924,58.76
+Canada,1925,59.23
+Canada,1926,57.92
+Canada,1927,58.63
+Canada,1928,58.54
+Canada,1929,57.94
+Canada,1930,58.91
+Canada,1931,60.27
+Canada,1932,61.35
+Canada,1933,62.26
+Canada,1934,62.66
+Canada,1935,62.4
+Canada,1936,62.65
+Canada,1937,61.29
+Canada,1938,63.26
+Canada,1939,63.69
+Canada,1940,63.96
+Canada,1941,63.72
+Canada,1942,64.63
+Canada,1943,64.55
+Canada,1944,65.28
+Canada,1945,66.27
+Canada,1946,66.47
+Canada,1947,66.72
+Canada,1948,67.27
+Canada,1949,67.59
+Canada,1950,68.2
+Canada,1951,68.5
+Canada,1952,68.7
+Canada,1953,69.1
+Canada,1954,69.9
+Canada,1955,70
+Canada,1956,70
+Canada,1957,69.9
+Canada,1958,70.6
+Canada,1959,70.6
+Canada,1960,71
+Canada,1961,71.2
+Canada,1962,71.2
+Canada,1963,71.3
+Canada,1964,71.6
+Canada,1965,71.8
+Canada,1966,71.9
+Canada,1967,72.1
+Canada,1968,72.2
+Canada,1969,72.4
+Canada,1970,72.6
+Canada,1971,73
+Canada,1972,72.8
+Canada,1973,73.1
+Canada,1974,73.1
+Canada,1975,73.5
+Canada,1976,73.9
+Canada,1977,74.2
+Canada,1978,74.5
+Canada,1979,74.8
+Canada,1980,75.1
+Canada,1981,75.5
+Canada,1982,75.7
+Canada,1983,76.1
+Canada,1984,76.4
+Canada,1985,76.3
+Canada,1986,76.5
+Canada,1987,76.8
+Canada,1988,76.9
+Canada,1989,77.1
+Canada,1990,77.4
+Canada,1991,77.6
+Canada,1992,77.9
+Canada,1993,77.7
+Canada,1994,77.9
+Canada,1995,78
+Canada,1996,78.3
+Canada,1997,78.5
+Canada,1998,78.7
+Canada,1999,78.9
+Canada,2000,79.2
+Canada,2001,79.5
+Canada,2002,79.6
+Canada,2003,79.7
+Canada,2004,80
+Canada,2005,80.1
+Canada,2006,80.5
+Canada,2007,80.5
+Canada,2008,80.7
+Canada,2009,81.1
+Canada,2010,81.3
+Canada,2011,81.5
+Canada,2012,81.7
+Canada,2013,81.8
+Canada,2014,81.9
+Canada,2015,81.9
+Canada,2016,82
+Canada,2017,82
+Canada,2018,82.1
+Canada,2019,82.4
+Canada,2020,82
+Canada,2021,82.7
+Ethiopia,1950,36.4
+Ethiopia,1951,36.6
+Ethiopia,1952,36.8
+Ethiopia,1953,37.2
+Ethiopia,1954,37.5
+Ethiopia,1955,38
+Ethiopia,1956,38.3
+Ethiopia,1957,32.4
+Ethiopia,1958,32.9
+Ethiopia,1959,39.9
+Ethiopia,1960,40.3
+Ethiopia,1961,41
+Ethiopia,1962,41.4
+Ethiopia,1963,42
+Ethiopia,1964,42.3
+Ethiopia,1965,42.4
+Ethiopia,1966,40.2
+Ethiopia,1967,42.7
+Ethiopia,1968,42.8
+Ethiopia,1969,42.8
+Ethiopia,1970,42.8
+Ethiopia,1971,42.9
+Ethiopia,1972,41.6
+Ethiopia,1973,41.6
+Ethiopia,1974,39.5
+Ethiopia,1975,39.4
+Ethiopia,1976,41.9
+Ethiopia,1977,41.9
+Ethiopia,1978,41.9
+Ethiopia,1979,42.8
+Ethiopia,1980,43.2
+Ethiopia,1981,43.6
+Ethiopia,1982,43.8
+Ethiopia,1983,36
+Ethiopia,1984,36.4
+Ethiopia,1985,37.4
+Ethiopia,1986,37.8
+Ethiopia,1987,45.4
+Ethiopia,1988,45.1
+Ethiopia,1989,45
+Ethiopia,1990,44.6
+Ethiopia,1991,46.1
+Ethiopia,1992,46.9
+Ethiopia,1993,47.4
+Ethiopia,1994,47.9
+Ethiopia,1995,48.3
+Ethiopia,1996,48.9
+Ethiopia,1997,49.5
+Ethiopia,1998,49.9
+Ethiopia,1999,49.4
+Ethiopia,2000,50.5
+Ethiopia,2001,51
+Ethiopia,2002,51.5
+Ethiopia,2003,52.5
+Ethiopia,2004,53.2
+Ethiopia,2005,54
+Ethiopia,2006,55.1
+Ethiopia,2007,56.4
+Ethiopia,2008,57.6
+Ethiopia,2009,58.8
+Ethiopia,2010,59.7
+Ethiopia,2011,60.7
+Ethiopia,2012,61.5
+Ethiopia,2013,62.4
+Ethiopia,2014,62.9
+Ethiopia,2015,63.6
+Ethiopia,2016,64.4
+Ethiopia,2017,64.8
+Ethiopia,2018,65.4
+Ethiopia,2019,65.8
+Ethiopia,2020,65.4
+Ethiopia,2021,65
+India,1881,25.44
+India,1891,24.27
+India,1901,23.49
+India,1905,23.98
+India,1911,23.15
+India,1915,24.02
+India,1921,24.86
+India,1925,27.61
+India,1931,29.31
+India,1935,30.95
+India,1941,32.59
+India,1950,41.7
+India,1951,41.7
+India,1952,42
+India,1953,42.2
+India,1954,43
+India,1955,43.4
+India,1956,43.8
+India,1957,44.1
+India,1958,44.4
+India,1959,44.9
+India,1960,45.2
+India,1961,45.4
+India,1962,45.7
+India,1963,45.9
+India,1964,46.2
+India,1965,45
+India,1966,45.3
+India,1967,45.7
+India,1968,47.5
+India,1969,47.9
+India,1970,48.2
+India,1971,48.6
+India,1972,49
+India,1973,49.5
+India,1974,50.2
+India,1975,50.8
+India,1976,51.4
+India,1977,51.9
+India,1978,52.5
+India,1979,53.1
+India,1980,53.6
+India,1981,54.2
+India,1982,54.7
+India,1983,55.3
+India,1984,55.8
+India,1985,56.3
+India,1986,56.8
+India,1987,57.3
+India,1988,57.8
+India,1989,58.2
+India,1990,58.7
+India,1991,59.1
+India,1992,59.5
+India,1993,59.8
+India,1994,60.2
+India,1995,60.6
+India,1996,61
+India,1997,61.4
+India,1998,61.8
+India,1999,62.2
+India,2000,62.7
+India,2001,63.1
+India,2002,63.6
+India,2003,64.1
+India,2004,64.5
+India,2005,65
+India,2006,65.4
+India,2007,65.8
+India,2008,66.1
+India,2009,66.5
+India,2010,66.9
+India,2011,67.4
+India,2012,67.9
+India,2013,68.5
+India,2014,69.1
+India,2015,69.6
+India,2016,70.1
+India,2017,70.5
+India,2018,70.7
+India,2019,70.9
+India,2020,70.1
+India,2021,67.2
+South Africa,1950,43.5
+South Africa,1951,44.2
+South Africa,1952,45.1
+South Africa,1953,46
+South Africa,1954,47.1
+South Africa,1955,48.3
+South Africa,1956,49.3
+South Africa,1957,50.4
+South Africa,1958,51.3
+South Africa,1959,52.1
+South Africa,1960,52.7
+South Africa,1961,53.1
+South Africa,1962,53.4
+South Africa,1963,53.6
+South Africa,1964,53.9
+South Africa,1965,54.2
+South Africa,1966,54.4
+South Africa,1967,54.6
+South Africa,1968,54.9
+South Africa,1969,55.2
+South Africa,1970,55.6
+South Africa,1971,56
+South Africa,1972,56.3
+South Africa,1973,56.7
+South Africa,1974,57.1
+South Africa,1975,57.5
+South Africa,1976,58
+South Africa,1977,58.5
+South Africa,1978,59
+South Africa,1979,59.4
+South Africa,1980,59.8
+South Africa,1981,60.4
+South Africa,1982,60.9
+South Africa,1983,61.5
+South Africa,1984,61.9
+South Africa,1985,62.4
+South Africa,1986,62.9
+South Africa,1987,63
+South Africa,1988,63.3
+South Africa,1989,63.3
+South Africa,1990,63.4
+South Africa,1991,63.3
+South Africa,1992,63.3
+South Africa,1993,63
+South Africa,1994,62.6
+South Africa,1995,62.3
+South Africa,1996,61.5
+South Africa,1997,60.8
+South Africa,1998,60
+South Africa,1999,59.2
+South Africa,2000,58.5
+South Africa,2001,57.3
+South Africa,2002,55.7
+South Africa,2003,54.3
+South Africa,2004,54
+South Africa,2005,54
+South Africa,2006,54.3
+South Africa,2007,55
+South Africa,2008,56
+South Africa,2009,57.4
+South Africa,2010,58.9
+South Africa,2011,60.7
+South Africa,2012,61.8
+South Africa,2013,62.5
+South Africa,2014,63.4
+South Africa,2015,63.9
+South Africa,2016,64.7
+South Africa,2017,65.4
+South Africa,2018,65.7
+South Africa,2019,66.2
+South Africa,2020,65.3
+South Africa,2021,62.3
+South Korea,1908,23.51
+South Korea,1913,24.98
+South Korea,1918,26.98
+South Korea,1923,29.53
+South Korea,1928,33.61
+South Korea,1933,37.39
+South Korea,1938,42.57
+South Korea,1942,44.89
+South Korea,1950,21.3
+South Korea,1951,26.5
+South Korea,1952,36.9
+South Korea,1953,41.7
+South Korea,1954,46.9
+South Korea,1955,49.1
+South Korea,1956,50.8
+South Korea,1957,52
+South Korea,1958,52.7
+South Korea,1959,53.6
+South Korea,1960,54.3
+South Korea,1961,54.9
+South Korea,1962,55.5
+South Korea,1963,56
+South Korea,1964,57.1
+South Korea,1965,58.2
+South Korea,1966,59.5
+South Korea,1967,61.3
+South Korea,1968,61.5
+South Korea,1969,62
+South Korea,1970,62.3
+South Korea,1971,62.9
+South Korea,1972,63.3
+South Korea,1973,63.8
+South Korea,1974,64.3
+South Korea,1975,64.6
+South Korea,1976,65
+South Korea,1977,64.5
+South Korea,1978,65.1
+South Korea,1979,66.3
+South Korea,1980,65.4
+South Korea,1981,67.9
+South Korea,1982,67.6
+South Korea,1983,67.1
+South Korea,1984,68.6
+South Korea,1985,68.7
+South Korea,1986,69.3
+South Korea,1987,69.5
+South Korea,1988,70.3
+South Korea,1989,70.8
+South Korea,1990,71.9
+South Korea,1991,72.4
+South Korea,1992,73
+South Korea,1993,73.3
+South Korea,1994,73.6
+South Korea,1995,73.9
+South Korea,1996,74.3
+South Korea,1997,75
+South Korea,1998,75.5
+South Korea,1999,76
+South Korea,2000,76.5
+South Korea,2001,77.3
+South Korea,2002,77.5
+South Korea,2003,77.5
+South Korea,2004,78
+South Korea,2005,78.5
+South Korea,2006,79.1
+South Korea,2007,79.5
+South Korea,2008,80
+South Korea,2009,80.6
+South Korea,2010,80.8
+South Korea,2011,81.2
+South Korea,2012,81.3
+South Korea,2013,81.9
+South Korea,2014,82.4
+South Korea,2015,82.6
+South Korea,2016,82.9
+South Korea,2017,83.3
+South Korea,2018,83.3
+South Korea,2019,83.7
+South Korea,2020,83.6
+South Korea,2021,83.7
+United States,1880,39.41
+United States,1890,45.21
+United States,1901,49.3
+United States,1902,50.5
+United States,1903,50.6
+United States,1904,49.6
+United States,1905,50.3
+United States,1906,50.1
+United States,1907,50.2
+United States,1908,51.9
+United States,1909,52.8
+United States,1910,51.8
+United States,1911,53.4
+United States,1912,54.1
+United States,1913,53.5
+United States,1914,54.6
+United States,1915,55.1
+United States,1916,54.2
+United States,1917,54
+United States,1918,47.2
+United States,1919,55.3
+United States,1920,55.4
+United States,1921,58.2
+United States,1922,58.1
+United States,1923,57.5
+United States,1924,58.5
+United States,1925,58.5
+United States,1926,57.9
+United States,1927,59.4
+United States,1928,58.3
+United States,1929,58.5
+United States,1930,59.6
+United States,1931,60.3
+United States,1932,61
+United States,1933,60.88
+United States,1934,60.23
+United States,1935,60.89
+United States,1936,60.35
+United States,1937,61.05
+United States,1938,62.39
+United States,1939,63.07
+United States,1940,63.23
+United States,1941,63.8
+United States,1942,64.59
+United States,1943,64.3
+United States,1944,65.09
+United States,1945,65.58
+United States,1946,66.28
+United States,1947,66.69
+United States,1948,67.25
+United States,1949,67.63
+United States,1950,68.1
+United States,1951,68.2
+United States,1952,68.4
+United States,1953,68.7
+United States,1954,69.5
+United States,1955,69.5
+United States,1956,69.6
+United States,1957,69.4
+United States,1958,69.7
+United States,1959,69.9
+United States,1960,69.8
+United States,1961,70.2
+United States,1962,70.1
+United States,1963,69.9
+United States,1964,70.2
+United States,1965,70.2
+United States,1966,70.2
+United States,1967,70.5
+United States,1968,70.2
+United States,1969,70.5
+United States,1970,70.7
+United States,1971,71.1
+United States,1972,71.2
+United States,1973,71.4
+United States,1974,71.9
+United States,1975,72.5
+United States,1976,72.8
+United States,1977,73.2
+United States,1978,73.4
+United States,1979,73.8
+United States,1980,73.7
+United States,1981,74.1
+United States,1982,74.5
+United States,1983,74.5
+United States,1984,74.7
+United States,1985,74.6
+United States,1986,74.7
+United States,1987,74.9
+United States,1988,74.8
+United States,1989,75.1
+United States,1990,75.4
+United States,1991,75.5
+United States,1992,75.8
+United States,1993,75.6
+United States,1994,75.7
+United States,1995,75.9
+United States,1996,76.2
+United States,1997,76.5
+United States,1998,76.7
+United States,1999,76.7
+United States,2000,76.8
+United States,2001,76.9
+United States,2002,77
+United States,2003,77.2
+United States,2004,77.6
+United States,2005,77.6
+United States,2006,77.8
+United States,2007,78.1
+United States,2008,78.2
+United States,2009,78.6
+United States,2010,78.8
+United States,2011,78.8
+United States,2012,78.9
+United States,2013,79
+United States,2014,79
+United States,2015,78.9
+United States,2016,78.8
+United States,2017,78.8
+United States,2018,79
+United States,2019,79.1
+United States,2020,77.4
+United States,2021,77.2
+World,1800,28.5
+World,1820,29
+World,1850,29.3
+World,1870,29.7
+World,1900,32
+World,1913,34.1
+World,1950,46.5
+World,1951,47.1
+World,1952,48.2
+World,1953,48.8
+World,1954,49.6
+World,1955,50.1
+World,1956,50.6
+World,1957,50.9
+World,1958,51.5
+World,1959,49.3
+World,1960,47.7
+World,1961,50.4
+World,1962,53.1
+World,1963,53.6
+World,1964,54.2
+World,1965,53.9
+World,1966,54.5
+World,1967,54.9
+World,1968,55.5
+World,1969,55.8
+World,1970,56.1
+World,1971,55.9
+World,1972,57.1
+World,1973,57.6
+World,1974,58
+World,1975,58.3
+World,1976,58.7
+World,1977,59.4
+World,1978,59.7
+World,1979,60.2
+World,1980,60.6
+World,1981,61
+World,1982,61.4
+World,1983,61.6
+World,1984,61.9
+World,1985,62.2
+World,1986,62.8
+World,1987,63.2
+World,1988,63.3
+World,1989,63.8
+World,1990,64
+World,1991,64.1
+World,1992,64.3
+World,1993,64.4
+World,1994,64.5
+World,1995,64.9
+World,1996,65.1
+World,1997,65.5
+World,1998,65.7
+World,1999,66.1
+World,2000,66.5
+World,2001,66.8
+World,2002,67.1
+World,2003,67.5
+World,2004,67.8
+World,2005,68.2
+World,2006,68.7
+World,2007,69.1
+World,2008,69.3
+World,2009,69.8
+World,2010,70.1
+World,2011,70.5
+World,2012,70.9
+World,2013,71.2
+World,2014,71.6
+World,2015,71.8
+World,2016,72.1
+World,2017,72.3
+World,2018,72.6
+World,2019,72.8
+World,2020,72
+World,2021,71
