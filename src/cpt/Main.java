@@ -3,14 +3,11 @@ package cpt;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.BarChart;
-import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.Tab;
-import javafx.scene.control.TabPane;
+import javafx.scene.control.CheckBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main extends Application {
@@ -29,6 +26,41 @@ public class Main extends Application {
         // Read the data from the CSV file
         CSVReader reader = new CSVReader();
         List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
+
+        // Create a VBox to store the checkboxes
+        VBox checkBoxes = new VBox();
+        for (LifeExpectancyData d : data) {
+            // Check if the series already exists
+            boolean seriesExists = false;
+            for (XYChart.Series<Number, Number> series : lineChart.getData()) {
+                if (series.getName().equals(d.getCountry())) {
+                    series.getData().add(new XYChart.Data<>(Integer.parseInt(d.getYear()), d.getLifeExpectancy()));
+                    seriesExists = true;
+                    break;
+                }
+            }
+            // If the series doesn't exist, create a new one
+            if (!seriesExists) {
+                XYChart.Series<Number, Number> series = new XYChart.Series<>();
+                series.setName(d.getCountry());
+                series.getData().add(new XYChart.Data<>(Integer.parseInt(d.getYear()), d.getLifeExpectancy()));
+                lineChart.getData().add(series);
+
+                // Create a new checkbox for the country
+                CheckBox checkBox = new CheckBox(d.getCountry());
+                checkBox.setSelected(true);
+                checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+                    if (newValue) {
+                        lineChart.getData().add(series);
+                    } else {
+                        lineChart.getData().remove(series);
+                    }
+                });
+                    checkBoxes.getChildren().add(checkBox);
+                }
+                
+            
+            }
     }
 }
 
