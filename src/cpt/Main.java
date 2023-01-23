@@ -2,6 +2,7 @@ package cpt;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
@@ -31,6 +32,9 @@ public class Main extends Application {
         NumberAxis yAxisBar = new NumberAxis();
         yAxisBar.setLabel("Life Expectancy (years)");
 
+        // Create the bar chart
+        BarChart<String, Number> barChart = new BarChart<>(xAxisBar, yAxisBar);
+        barChart.setTitle("Life Expectancy by Country");
 
         // Read the data from the CSV file
         CSVReader reader = new CSVReader();
