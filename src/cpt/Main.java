@@ -7,6 +7,7 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class Main extends Application {
         List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
 
         // Create a VBox to store the checkboxes
-        VBox checkBoxes = new VBox();
+        HBox checkBoxes = new HBox();
         for (LifeExpectancyData d : data) {
             // Check if the series already exists
             boolean seriesExists = false;
@@ -60,7 +61,14 @@ public class Main extends Application {
                 }
                 
             
+                
             }
+            // Create the scene and show the stage
+            Scene scene = new Scene(new VBox(lineChart, checkBoxes), 800, 600);
+            stage.setScene(scene);
+            stage.setTitle("Life Expectancy Chart");
+            stage.show();
     }
+    
 }
 
