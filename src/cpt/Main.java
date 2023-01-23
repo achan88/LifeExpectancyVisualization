@@ -89,7 +89,7 @@ public class Main extends Application {
             barChart.getData().clear();
             barChart.getData().add(dataList.get(yearSelector.getSelectionModel().getSelectedItem()- 1950));
         });
-        
+
 
         // Create a VBox to store the checkboxes
         HBox checkBoxes = new HBox();
@@ -123,10 +123,6 @@ public class Main extends Application {
                     checkBoxes.getChildren().add(checkBox);
                 }
             }
-            
-            // Create a button to sort the data in the bar chart
-            Button sortButton = new Button("Sort Data");
-            sortButton.setOnAction(event -> barChart.getData().clear());
 
             // Create the scene and show the stage
             TabPane tabPane = new TabPane();
@@ -134,7 +130,6 @@ public class Main extends Application {
             tab1.setContent(new VBox(lineChart, checkBoxes));
             Tab tab2 = new Tab("Bar Chart");
             VBox root = new VBox(yearSelector, barChart);
-            root.getChildren().add(sortButton);
             tab2.setContent(root);
             tabPane.getTabs().addAll(tab1, tab2);
             Scene scene = new Scene(tabPane, 800, 600);
