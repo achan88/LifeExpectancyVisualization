@@ -3,6 +3,7 @@ package cpt;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.chart.LineChart;
+import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.CheckBox;
@@ -23,6 +24,13 @@ public class Main extends Application {
         // Create the line chart
         LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
         lineChart.setTitle("Life Expectancy by Year");
+
+        // Create the X and Y axes for the bar chart
+        CategoryAxis xAxisBar = new CategoryAxis();
+        xAxisBar.setLabel("Country");
+        NumberAxis yAxisBar = new NumberAxis();
+        yAxisBar.setLabel("Life Expectancy (years)");
+
 
         // Read the data from the CSV file
         CSVReader reader = new CSVReader();
