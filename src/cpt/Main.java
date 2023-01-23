@@ -42,7 +42,7 @@ public class Main extends Application {
         barChart.setTitle("Life Expectancy by Country");
 
         // Create a list to store the data for each year
-        List<XYChart.Series<String, Number>> dataList = new ArrayList<>();
+        ArrayList<XYChart.Series<String, Number>> dataList = new ArrayList<>();
         for (int i = 1950; i <= 2021; i++) {
             XYChart.Series<String, Number> data1 = new XYChart.Series<>();
             data1.setName(String.valueOf(i));
@@ -87,7 +87,7 @@ public class Main extends Application {
         yearSelector.setValue(1950);
         yearSelector.setOnAction(event -> {
             barChart.getData().clear();
-            barChart.getData().add(dataList.get(yearSelector.getSelectionModel().getSelectedItem()- 1950));
+            barChart.getData().add(dataList.get(yearSelector.getSelectionModel().getSelectedItem() - 1950));
         });
 
 
@@ -95,16 +95,16 @@ public class Main extends Application {
         HBox checkBoxes = new HBox();
         for (LifeExpectancyData d : data) {
             // Check if the series already exists
-            boolean seriesExists = false;
+            boolean boolExistsAlreaDY = false;
             for (XYChart.Series<Number, Number> series : lineChart.getData()) {
                 if (series.getName().equals(d.getCountry())) {
                     series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
-                    seriesExists = true;
+                    boolExistsAlreaDY = true;
                     break;
                 }
             }
             // If the series doesn't exist, create a new one
-            if (!seriesExists) {
+            if (!boolExistsAlreaDY) {
                 XYChart.Series<Number, Number> series = new XYChart.Series<>();
                 series.setName(d.getCountry());
                 series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
@@ -121,21 +121,27 @@ public class Main extends Application {
                     }
                 });
                     checkBoxes.getChildren().add(checkBox);
-                }
             }
+        }
 
-            // Create the scene and show the stage
-            TabPane tabPane = new TabPane();
-            Tab tab1 = new Tab("Line Chart");
-            tab1.setContent(new VBox(lineChart, checkBoxes));
-            Tab tab2 = new Tab("Bar Chart");
-            VBox root = new VBox(yearSelector, barChart);
-            tab2.setContent(root);
-            tabPane.getTabs().addAll(tab1, tab2);
-            Scene scene = new Scene(tabPane, 800, 600);
-            stage.setScene(scene);
-            stage.setTitle("Life Expectancy Chart");
-            stage.show();
+        
+
+        // Create the scene and show the stage
+        TabPane tabPane = new TabPane();
+        Tab tab1 = new Tab("Line Chart");
+        tab1.setContent(new VBox(lineChart, checkBoxes));
+
+        Tab tab2 = new Tab("Bar Chart");
+        VBox root = new VBox(yearSelector, barChart);
+        tab2.setContent(root);
+
+        tabPane.getTabs().addAll(tab1, tab2);
+
+        Scene scene = new Scene(tabPane, 800, 600);
+        stage.setScene(scene);
+        stage.setTitle("Life Expectancy Chart");
+        stage.show();
+
     }
 
     public static void main(String[] args) {
