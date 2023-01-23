@@ -69,6 +69,10 @@ public class Main extends Application {
             stage.setTitle("Life Expectancy Chart");
             stage.show();
     }
-    
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
 }
 
