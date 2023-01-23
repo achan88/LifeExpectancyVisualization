@@ -11,6 +11,7 @@ import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.stage.Stage;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Application {
     @Override
@@ -24,6 +25,10 @@ public class Main extends Application {
         // Create the line chart
         LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
         lineChart.setTitle("Life Expectancy by Year");
+
+        // Read the data from the CSV file
+        CSVReader reader = new CSVReader();
+        List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
     }
 }
 
