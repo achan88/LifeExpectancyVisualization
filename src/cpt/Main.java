@@ -74,6 +74,9 @@ public class Main extends Application {
 
         // Add the list of countries to the x-axis
         xAxisBar.setCategories(FXCollections.observableArrayList(countries));
+
+        // Default for bar chart is 1950
+        barChart.getData().add(dataList.get(0));
         
 
         // Create a VBox to store the checkboxes
