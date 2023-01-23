@@ -2,10 +2,10 @@ package cpt;
 
 public class LifeExpectancyData {
     private String country;
-    private String year;
+    private int year;
     private double lifeExpectancy;
 
-    public LifeExpectancyData(String country, String year, double lifeExpectancy) {
+    public LifeExpectancyData(String country, int year, double lifeExpectancy) {
         this.country = country;
         this.year = year;
         this.lifeExpectancy = lifeExpectancy;
@@ -15,7 +15,7 @@ public class LifeExpectancyData {
         return country;
     }
 
-    public String getYear() {
+    public int getYear() {
         return year;
     }
 

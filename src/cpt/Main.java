@@ -58,7 +58,7 @@ public class Main extends Application {
         
         // Add the data to the list for each year
         for (LifeExpectancyData d : data) {
-            int year = Integer.parseInt(d.getYear());
+            int year = d.getYear();
             if (year >= 1950 && year <= 2021) {
                 XYChart.Series<String, Number> yearData = dataList.get(year - 1950);
 
@@ -98,7 +98,7 @@ public class Main extends Application {
             boolean seriesExists = false;
             for (XYChart.Series<Number, Number> series : lineChart.getData()) {
                 if (series.getName().equals(d.getCountry())) {
-                    series.getData().add(new XYChart.Data<>(Integer.parseInt(d.getYear()), d.getLifeExpectancy()));
+                    series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
                     seriesExists = true;
                     break;
                 }
@@ -107,7 +107,7 @@ public class Main extends Application {
             if (!seriesExists) {
                 XYChart.Series<Number, Number> series = new XYChart.Series<>();
                 series.setName(d.getCountry());
-                series.getData().add(new XYChart.Data<>(Integer.parseInt(d.getYear()), d.getLifeExpectancy()));
+                series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
                 lineChart.getData().add(series);
 
                 // Create a new checkbox for the country
