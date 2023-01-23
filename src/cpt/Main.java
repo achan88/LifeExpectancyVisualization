@@ -43,9 +43,9 @@ public class Main extends Application {
         // Create a list to store the data for each year
         List<XYChart.Series<String, Number>> dataList = new ArrayList<>();
         for (int i = 1950; i <= 2021; i++) {
-            XYChart.Series<String, Number> data = new XYChart.Series<>();
-            data.setName(String.valueOf(i));
-            dataList.add(data);
+            XYChart.Series<String, Number> data1 = new XYChart.Series<>();
+            data1.setName(String.valueOf(i));
+            dataList.add(data1);
         }
 
         // Create an ArrayList to store the countries and their index
@@ -55,7 +55,25 @@ public class Main extends Application {
         CSVReader reader = new CSVReader();
         List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
         
+        // Add the data to the list for each year
+        for (LifeExpectancyData d : data) {
+            int year = Integer.parseInt(d.getYear());
+            if (year >= 1950 && year <= 2021) {
+                XYChart.Series<String, Number> yearData = dataList.get(year - 1950);
 
+                String country = d.getCountry();
+                int index = countries.indexOf(country);
+                if (index == -1) {
+                    countries.add(country);
+                    index = countries.size() - 1;
+                }
+
+                yearData.getData().add(new XYChart.Data<>(countries.get(index), d.getLifeExpectancy()));
+            }
+        }
+
+        // Add the list of countries to the x-axis
+        xAxisBar.setCategories(FXCollections.observableArrayList(countries));
         
 
         // Create a VBox to store the checkboxes
