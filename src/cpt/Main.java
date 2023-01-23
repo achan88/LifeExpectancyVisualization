@@ -77,6 +77,17 @@ public class Main extends Application {
 
         // Default for bar chart is 1950
         barChart.getData().add(dataList.get(0));
+
+        // Create a dropdown menu to switch between different years
+        ComboBox<Integer> yearSelector = new ComboBox<>();
+        for (int i = 1950; i <= 2021; i++) {
+            yearSelector.getItems().add(i);
+        }
+        yearSelector.setValue(1950);
+        yearSelector.setOnAction(event -> {
+            barChart.getData().clear();
+            barChart.getData().add(dataList.get(yearSelector.getSelectionModel().getSelectedItem()- 1950));
+        });
         
 
         // Create a VBox to store the checkboxes
@@ -117,7 +128,8 @@ public class Main extends Application {
             Tab tab1 = new Tab("Line Chart");
             tab1.setContent(new VBox(lineChart, checkBoxes));
             Tab tab2 = new Tab("Bar Chart");
-            tab2.setContent(barChart);
+            VBox root = new VBox(yearSelector, barChart);
+            tab2.setContent(root);
             tabPane.getTabs().addAll(tab1, tab2);
             Scene scene = new Scene(tabPane, 800, 600);
             stage.setScene(scene);
