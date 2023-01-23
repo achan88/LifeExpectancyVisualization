@@ -47,6 +47,9 @@ public class Main extends Application {
             data.setName(String.valueOf(i));
             dataList.add(data);
         }
+
+        // Create an ArrayList to store the countries and their index
+        ArrayList<String> countries = new ArrayList<>();
         
         // Read the data from the CSV file
         CSVReader reader = new CSVReader();
