@@ -31,20 +31,6 @@ public class Main extends Application {
      */
     public void start(Stage stage) {
 
-        // Initial line chart set up
-
-        // Create the x-axis with label, and lower and upper bounds (limited to the highest and lowest years)
-        NumberAxis xAxis = new NumberAxis("Year", 1800d, 2021d, 10d);
-        xAxis.setLabel("Year");
-
-        // Create the y-axis for line chart
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Life Expectancy (years)");
-
-        // Create the line chart
-        LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
-        lineChart.setTitle("Life Expectancy by Year");
-
         // Create x-axis for bar chart
         CategoryAxis xAxisBar = new CategoryAxis();
         xAxisBar.setLabel("Country");
@@ -73,6 +59,32 @@ public class Main extends Application {
 
         // Use CSVreader to add data to a list
         List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
+
+        // Initial line chart set up
+
+        // Create the y-axis for line chart
+        NumberAxis yAxis = new NumberAxis();
+        yAxis.setLabel("Life Expectancy (years)");
+        
+        // Create an array of integers to store the years
+        int[] years = new int[data.size()];
+        int k = 0;
+        for (LifeExpectancyData d : data) {
+            years[k++] = d.getYear();
+        }
+
+        // Create an instance of the class that implements the selection sort algorithm
+        SelectionSort selectionSort = new SelectionSort();
+
+        // Pass the array of years to the sorting method
+        selectionSort.sort(years);
+
+        // Set the lower and upper bounds of the x-axis
+        NumberAxis xAxis = new NumberAxis("Year", years[0], years[years.length - 1], 10d);
+
+        // Create the line chart
+        LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
+        lineChart.setTitle("Life Expectancy by Year");
         
         // Add the data to the list for each year
         for (LifeExpectancyData d : data) {
