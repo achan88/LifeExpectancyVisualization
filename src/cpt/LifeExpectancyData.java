@@ -22,7 +22,7 @@ public class LifeExpectancyData {
     }
 
     /**
-     * Getter method for country variable
+     * Accessor method for country variable
      * 
      * @return country
      * @author A. Chan
@@ -31,10 +31,22 @@ public class LifeExpectancyData {
         return country;
     }
 
+    /**
+     * Accessor method for year variable
+     * 
+     * @return year
+     * @author A. Chan
+     */
     public int getYear() {
         return year;
     }
 
+    /**
+     * Accessor method for life expectancy
+     * 
+     * @return life expectancy
+     * @author A. Chan
+     */
     public double getLifeExpectancy() {
         return lifeExpectancy;
     }
