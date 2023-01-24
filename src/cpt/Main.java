@@ -1,5 +1,10 @@
 package cpt;
 
+/**
+ * Main program to display the line and bar charts
+ * 
+ * @author A. Chan
+ */
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.scene.Scene;
