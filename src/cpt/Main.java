@@ -7,6 +7,7 @@ package cpt;
  */
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
@@ -138,6 +139,8 @@ public class Main extends Application {
         
         // Create a VBox to store the checkboxes
         HBox checkBoxes = new HBox();
+        checkBoxes.setAlignment(Pos.CENTER);
+
 
         // loop through the data list
         for (LifeExpectancyData d : data) {
