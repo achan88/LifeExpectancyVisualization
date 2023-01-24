@@ -1,5 +1,10 @@
 package cpt;
 
+/**
+ * A class for the data points on life expectancy from various countries and years
+ * 
+ * @author A. Chan
+ */
 public class LifeExpectancyData {
 
     // instance variables
