@@ -7,6 +7,6 @@ This data set is on life expectancies around the world. However, I wanted to nar
 
 I selected this data set because I think that it is important to look at the life expectancies of different countries. Life expectancy doesn't just tell us the average length a person is expected to live in a certain area of the world, but it also allows us to examine the overall improvements or deterioration of a country's living standards. I wanted to really see the difference between the life expectancies of a first-world country such as Canada, compared to other areas in the world. This program allows others to examine countries in a broader sense, and to understand the situations of certain countries.
 
-Course Connection Video:
+Course Connection Video: https://drive.google.com/file/d/1IOTh44IuALv4txC1O3GGDHQmteENL-Wn/view?usp=sharing
 
-Demo video:
+Demo video: https://drive.google.com/file/d/15zLcrkR5HSekXEwBoKOVPNmlIvSGLlFe/view?usp=sharing
