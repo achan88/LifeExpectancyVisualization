@@ -16,6 +16,7 @@ import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import javafx.scene.control.Button;
 
@@ -42,11 +43,11 @@ public class Main extends Application {
         barChart.setTitle("Life Expectancy by Country");
 
         // Create a list to store the data for each year
-        ArrayList<XYChart.Series<String, Number>> dataList = new ArrayList<>();
+        ArrayList<XYChart.Series<String, Number>> yearList = new ArrayList<>();
         for (int i = 1950; i <= 2021; i++) {
             XYChart.Series<String, Number> data1 = new XYChart.Series<>();
             data1.setName(String.valueOf(i));
-            dataList.add(data1);
+            yearList.add(data1);
         }
 
         // Create an ArrayList to store the countries and their index
@@ -60,7 +61,7 @@ public class Main extends Application {
         for (LifeExpectancyData d : data) {
             int year = d.getYear();
             if (year >= 1950 && year <= 2021) {
-                XYChart.Series<String, Number> yearData = dataList.get(year - 1950);
+                XYChart.Series<String, Number> yearData = yearList.get(year - 1950);
 
                 String country = d.getCountry();
                 int index = countries.indexOf(country);
@@ -77,34 +78,45 @@ public class Main extends Application {
         xAxisBar.setCategories(FXCollections.observableArrayList(countries));
 
         // Default for bar chart is 1950
-        barChart.getData().add(dataList.get(0));
+        barChart.getData().add(yearList.get(0));
 
         // Create a dropdown menu to switch between different years
         ComboBox<Integer> yearSelector = new ComboBox<>();
         for (int i = 1950; i <= 2021; i++) {
             yearSelector.getItems().add(i);
         }
+
         yearSelector.setValue(1950);
+
         yearSelector.setOnAction(event -> {
             barChart.getData().clear();
-            barChart.getData().add(dataList.get(yearSelector.getSelectionModel().getSelectedItem() - 1950));
+            barChart.getData().add(yearList.get(yearSelector.getSelectionModel().getSelectedItem() - 1950));
         });
-
+        
+        Button sortButton = new Button("Sort Life Expectancy");
+        sortButton.setOnAction(event -> {
+            int selectedYear = yearSelector.getValue();
+            XYChart.Series<String, Number> selectedData = yearList.get(selectedYear - 1950);
+            selectedData.setName(selectedData.getName() + " Sorted");
+            SelectionSort.sortData(selectedData);
+            barChart.getData().clear();
+            barChart.getData().add(selectedData);
+        });
 
         // Create a VBox to store the checkboxes
         HBox checkBoxes = new HBox();
         for (LifeExpectancyData d : data) {
             // Check if the series already exists
-            boolean boolExistsAlreaDY = false;
+            boolean boolExistsAlready = false;
             for (XYChart.Series<Number, Number> series : lineChart.getData()) {
                 if (series.getName().equals(d.getCountry())) {
                     series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
-                    boolExistsAlreaDY = true;
+                    boolExistsAlready = true;
                     break;
                 }
             }
             // If the series doesn't exist, create a new one
-            if (!boolExistsAlreaDY) {
+            if (!boolExistsAlready) {
                 XYChart.Series<Number, Number> series = new XYChart.Series<>();
                 series.setName(d.getCountry());
                 series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
@@ -132,7 +144,7 @@ public class Main extends Application {
         tab1.setContent(new VBox(lineChart, checkBoxes));
 
         Tab tab2 = new Tab("Bar Chart");
-        VBox root = new VBox(yearSelector, barChart);
+        VBox root = new VBox(sortButton, yearSelector, barChart);
         tab2.setContent(root);
 
         tabPane.getTabs().addAll(tab1, tab2);
