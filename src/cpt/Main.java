@@ -16,7 +16,6 @@ import javafx.scene.layout.VBox;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import javafx.scene.control.Button;
 
@@ -93,15 +92,17 @@ public class Main extends Application {
             barChart.getData().add(yearList.get(yearSelector.getSelectionModel().getSelectedItem() - 1950));
         });
         
-        Button sortButton = new Button("Sort Life Expectancy");
-        sortButton.setOnAction(event -> {
-            int selectedYear = yearSelector.getValue();
-            XYChart.Series<String, Number> selectedData = yearList.get(selectedYear - 1950);
-            selectedData.setName(selectedData.getName() + " Sorted");
-            SelectionSort.sortData(selectedData);
-            barChart.getData().clear();
-            barChart.getData().add(selectedData);
+
+        Button CanadaButton = new Button("Output Canada's Life Expectancy");
+
+        CanadaButton.setOnAction(event -> {
+            
+            
         });
+        
+
+
+    
 
         // Create a VBox to store the checkboxes
         HBox checkBoxes = new HBox();
@@ -136,15 +137,13 @@ public class Main extends Application {
             }
         }
 
-        
-
         // Create the scene and show the stage
         TabPane tabPane = new TabPane();
         Tab tab1 = new Tab("Line Chart");
         tab1.setContent(new VBox(lineChart, checkBoxes));
 
         Tab tab2 = new Tab("Bar Chart");
-        VBox root = new VBox(sortButton, yearSelector, barChart);
+        VBox root = new VBox(yearSelector, barChart);
         tab2.setContent(root);
 
         tabPane.getTabs().addAll(tab1, tab2);
@@ -154,6 +153,7 @@ public class Main extends Application {
         stage.setTitle("Life Expectancy Chart");
         stage.show();
 
+    
     }
 
     public static void main(String[] args) {
