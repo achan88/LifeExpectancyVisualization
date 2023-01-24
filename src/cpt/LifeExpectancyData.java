@@ -1,58 +1,58 @@
 package cpt;
 
 /**
- * A class for the data points on life expectancy from various countries and years
+ * A class for the data points on life expectancy from various countries and intYears
  * 
  * @author A. Chan
  */
 public class LifeExpectancyData {
 
     // instance variables
-    private String country;
-    private int year;
-    private double lifeExpectancy;
+    private String strCountry;
+    private int intYear;
+    private double dblLifeExpectancy;
 
     /**
-     * Constructor for LifeExpectancyData class
+     * Constructor for dblLifeExpectancyData class
      * 
-     * @param country country of data
-     * @param year year of data 
-     * @param lifeExpectancy life expectancy data 
+     * @param strCountry strCountry of data
+     * @param intYear intYear of data 
+     * @param dblLifeExpectancy life expectancy data 
      * @author A. Chan
      */
-    public LifeExpectancyData(String country, int year, double lifeExpectancy) {
-        this.country = country;
-        this.year = year;
-        this.lifeExpectancy = lifeExpectancy;
+    public LifeExpectancyData(String strCountry, int intYear, double dblLifeExpectancy) {
+        this.strCountry = strCountry;
+        this.intYear = intYear;
+        this.dblLifeExpectancy = dblLifeExpectancy;
     }
 
     /**
-     * Accessor method for country variable
+     * Accessor method for strCountry variable
      * 
-     * @return country
+     * @return strCountry
      * @author A. Chan
      */
     public String getCountry() {
-        return country;
+        return strCountry;
     }
 
     /**
-     * Accessor method for year variable
+     * Accessor method for intYear variable
      * 
-     * @return year
+     * @return intYear
      * @author A. Chan
      */
     public int getYear() {
-        return year;
+        return intYear;
     }
 
     /**
-     * Accessor method for life expectancy
+     * Accessor method for life expectancy variable
      * 
      * @return life expectancy
      * @author A. Chan
      */
     public double getLifeExpectancy() {
-        return lifeExpectancy;
+        return dblLifeExpectancy;
     }
 }

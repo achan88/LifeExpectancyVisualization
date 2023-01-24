@@ -7,6 +7,7 @@ package cpt;
  */
 import javafx.application.Application;
 import javafx.collections.FXCollections;
+import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.chart.BarChart;
 import javafx.scene.chart.LineChart;
@@ -24,26 +25,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main extends Application {
-    @Override
 
+    @Override
+    
     /**
      * Start method
      */
     public void start(Stage stage) {
-
-        // Initial line chart set up
-
-        // Create the x-axis with label, and lower and upper bounds (limited to the highest and lowest years)
-        NumberAxis xAxis = new NumberAxis("Year", 1800d, 2021d, 10d);
-        xAxis.setLabel("Year");
-
-        // Create the y-axis for line chart
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Life Expectancy (years)");
-
-        // Create the line chart
-        LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
-        lineChart.setTitle("Life Expectancy by Year");
 
         // Create x-axis for bar chart
         CategoryAxis xAxisBar = new CategoryAxis();
@@ -59,50 +47,85 @@ public class Main extends Application {
 
         // Create a year list to store the year data for bar chart
         ArrayList<XYChart.Series<String, Number>> yearList = new ArrayList<>();
+        
         for (int i = 1950; i <= 2021; i++) {
-            XYChart.Series<String, Number> data1 = new XYChart.Series<>();
-            data1.setName(String.valueOf(i));
-            yearList.add(data1);
+
+            XYChart.Series<String, Number> TempDataSeries = new XYChart.Series<>();
+
+            TempDataSeries.setName(String.valueOf(i));
+
+            yearList.add(TempDataSeries);
         }
 
         // Create an ArrayList to store the countries and their index
-        ArrayList<String> countries = new ArrayList<>();
+        ArrayList<String> strCountriesArray = new ArrayList<>();
         
         // Create object of CSVReader
         CSVReader reader = new CSVReader();
 
         // Use CSVreader to add data to a list
-        List<LifeExpectancyData> data = reader.read("src/cpt/life_expectancy.csv");
+        List<LifeExpectancyData> lifeDataList = reader.read("src/cpt/life_expectancy.csv");
+
+        // Initial line chart set up
+
+        // Create the y-axis for line chart
+        NumberAxis yAxis = new NumberAxis();
+        yAxis.setLabel("Life Expectancy (years)");
+        
+        // Create an array of integers to store the years
+        int[] years = new int[lifeDataList .size()];
+
+        int k = 0;
+
+        for (LifeExpectancyData d : lifeDataList ) {
+
+            years[k++] = d.getYear();
+
+        }
+
+        // Create an instance of the class that implements the selection sort algorithm
+        SelectionSort selectionSort = new SelectionSort();
+
+        // Pass the array of years to the sorting method
+        selectionSort.sort(years);
+
+        // Set the lower and upper bounds of the x-axis
+        NumberAxis xAxis = new NumberAxis("Year", years[0], years[years.length - 1], 10d);
+
+        // Create the line chart
+        LineChart<Number, Number> lineChart = new LineChart<>(xAxis, yAxis);
+        lineChart.setTitle("Life Expectancy by Year");
         
         // Add the data to the list for each year
-        for (LifeExpectancyData d : data) {
+        for (LifeExpectancyData d : lifeDataList ) {
 
             // get the current year 
             int year = d.getYear();
 
             // set bounds for bar chart (from 1950 to 2021)
             if (year >= 1950 && year <= 2021) {
+
                 XYChart.Series<String, Number> yearData = yearList.get(year - 1950);
 
                 // get country
                 String country = d.getCountry();
-                int index = countries.indexOf(country);
+                int index = strCountriesArray.indexOf(country);
 
-                // country was not found
+                // if country was not found
                 if (index == -1) {
                     
                     // add new country
-                    countries.add(country);
-                    index = countries.size() - 1;
+                    strCountriesArray.add(country);
+                    index = strCountriesArray.size() - 1;
                 }
 
                 // add the data to the list
-                yearData.getData().add(new XYChart.Data<>(countries.get(index), d.getLifeExpectancy()));
+                yearData.getData().add(new XYChart.Data<>(strCountriesArray.get(index), d.getLifeExpectancy()));
             }
         }
 
         // Add the list of countries to the x-axis
-        xAxisBar.setCategories(FXCollections.observableArrayList(countries));
+        xAxisBar.setCategories(FXCollections.observableArrayList(strCountriesArray));
 
         // Default for bar chart is 1950
         barChart.getData().add(yearList.get(0));
@@ -120,15 +143,19 @@ public class Main extends Application {
 
         // action event, clears bar chart, and adds the selected year
         yearSelector.setOnAction(event -> {
+
             barChart.getData().clear();
             barChart.getData().add(yearList.get(yearSelector.getSelectionModel().getSelectedItem() - 1950));
+            
         });
         
         // Create a VBox to store the checkboxes
         HBox checkBoxes = new HBox();
+        checkBoxes.setAlignment(Pos.CENTER);
+
 
         // loop through the data list
-        for (LifeExpectancyData d : data) {
+        for (LifeExpectancyData d : lifeDataList) {
 
             // If the series exists, add to it
             boolean boolExistsAlready = false;
@@ -136,8 +163,10 @@ public class Main extends Application {
 
                 // if the series name is equal to the country, add to the series
                 if (series.getName().equals(d.getCountry())) {
+
                     series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
                     boolExistsAlready = true;
+
                     break;
                 }
             }
@@ -150,6 +179,7 @@ public class Main extends Application {
 
                 // Add the new data point to the series
                 series.getData().add(new XYChart.Data<>(d.getYear(), d.getLifeExpectancy()));
+
                 lineChart.getData().add(series);
 
                 // Create a new checkbox for the country
@@ -161,9 +191,13 @@ public class Main extends Application {
                 // Constantly check is they are checked or not. If they aren't checked, remove the series
                 checkBox.selectedProperty().addListener((observable, oldValue, newValue) -> {
                     if (newValue) {
+
                         lineChart.getData().add(series);
+
                     } else {
+
                         lineChart.getData().remove(series);
+
                     }
                 });
                     checkBoxes.getChildren().add(checkBox);
@@ -176,16 +210,18 @@ public class Main extends Application {
         TabPane tabPane = new TabPane();
 
         // First tab; line chart
-        Tab tab1 = new Tab("Line Chart");
-        tab1.setContent(new VBox(lineChart, checkBoxes));
+        Tab lineTab = new Tab("Line Chart");
+
+        lineTab.setContent(new VBox(lineChart, checkBoxes));
 
         // Second tab; bar chart
-        Tab tab2 = new Tab("Bar Chart");
+        Tab barTab = new Tab("Bar Chart");
         VBox root = new VBox(yearSelector, barChart);
-        tab2.setContent(root);
+        
+        barTab.setContent(root);
 
         // Both tabs
-        tabPane.getTabs().addAll(tab1, tab2);
+        tabPane.getTabs().addAll(lineTab, barTab);
 
         // scene, with tabPane
         Scene scene = new Scene(tabPane, 800, 600);
