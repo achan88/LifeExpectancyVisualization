@@ -8,7 +8,10 @@ package cpt;
 public class SelectionSort {
     
     /**
-     * Sorts an integer array
+     * Selection sorts an array
+     * 
+     * @param array inputted integer array
+     * @author A. Chan
      */
     public void sort(int[] array) {
         for (int i = 0; i < array.length - 1; i++) {
