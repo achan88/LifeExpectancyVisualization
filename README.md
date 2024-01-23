@@ -1,12 +1,47 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=9711292&assignment_repo_type=AssignmentRepo)
-# ICS4U CPT (Edit this)
+# Life Expectancy Data Visualization
 
-Data set: https://ourworldindata.org/life-expectancy
+# Overview
 
-This data set is on life expectancies around the world. However, I wanted to narrow it down to a few specific countries around the world to provide a more holistic view of life expectancies around the world. This dataset consists of years starting from 1800, and ending in 2021. Life expectancy is an important metric to take a closer look at as it is a key indicator for assessing the health of a population. Life expectancy is also a good indicator when looking at the overall establishment of a country, as developing countries tend to have lower life expectancies. This dataset that I used contained countries from all around the world, but I have decided to reduce the amount of data to zone in on a few countries. 
+This JavaFX program is designed to visualize life expectancy data from over 600 countries. The interactive application offers insights into global trends and patterns related to life expectancy, providing a user-friendly experience for data exploration.
 
-I selected this data set because I think that it is important to look at the life expectancies of different countries. Life expectancy doesn't just tell us the average length a person is expected to live in a certain area of the world, but it also allows us to examine the overall improvements or deterioration of a country's living standards. I wanted to really see the difference between the life expectancies of a first-world country such as Canada, compared to other areas in the world. This program allows others to examine countries in a broader sense, and to understand the situations of certain countries.
+# Features
 
-Course Connection Video: https://drive.google.com/file/d/1IOTh44IuALv4txC1O3GGDHQmteENL-Wn/view?usp=sharing
+- **Interactive Graphs:** View life expectancy trends over time using interactive graphs.
+- **Country Comparison:** Compare life expectancy data for multiple countries simultaneously.
 
-Demo video: https://drive.google.com/file/d/15zLcrkR5HSekXEwBoKOVPNmlIvSGLlFe/view?usp=sharing
+# Getting Started
+
+## Prerequisites
+
+- Java Development Kit (JDK) 8 or later installed on your system.
+- JavaFX SDK (included in JDK 8 and 11, separate download for later versions).
+
+## Running the Program
+
+1. Clone this repository to your local machine:
+
+   git clone https://github.com/your-username/your-repository.git
+
+## Usage
+
+- Upon running the application, you will be presented with a main dashboard displaying life expectancy graphs.
+- Use the navigation controls to select specific countries, regions, and time periods.
+- Adjust settings, such as graph type and axis scales, for a customized visualization.
+- Explore the comparison feature to analyze life expectancy across multiple countries.
+
+# Data Source
+
+Data Source: https://ourworldindata.org/life-expectancy#:~:text=Across%20the%20world%2C%20people%20are,than%20doubled%20to%2071%20years.
+
+# Contributing
+
+All contributions are welcome!
+
+# License
+
+This project is licensed under the MIT License.
+
+# Acknowledgments
+
+- **Data Source:** https://ourworldindata.org/life-expectancy#:~:text=Across%20the%20world%2C%20people%20are,than%20doubled%20to%2071%20years
+- **JavaFX:** https://openjfx.io/
