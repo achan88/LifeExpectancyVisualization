@@ -18,9 +18,9 @@ This JavaFX program is designed to visualize life expectancy data from over 100 
 
 ## Running the Program
 
-1. Clone this repository to your local machine:
+Clone this repository to your local machine:
 
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/achan88/LifeExpectancyVisualization.git
 
 ## Usage
 
